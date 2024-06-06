@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULAR IMC</title>
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="calculator-fill.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="background">
+        <div class="table">
+            <table>
+                <p class="title">VEJA INTERPRETAÇÃO DO IMC</p>
+                <tr>
+                    <td>IMC</td>
+                    <td>CLASSIFICAÇÃO</td>
+                    <td>OBESIDADE(GRAU)</td>
+                </tr>
+                <tr>
+                    <td>MENOR QUE 18,5</td>
+                    <td>MAGREZA</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>ENTRE 18,5 E 24,9</td>
+                    <td>NORMAL</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>ENTRE 25,0 E 29,9</td>
+                    <td>SOBREPESO</td>
+                    <td>I</td>
+                </tr>
+                <tr>
+                    <td>ENTRE 30,0 E 39,9</td>
+                    <td>OBESIDADE</td>
+                    <td>II</td>
+                </tr>
+                <tr>
+                    <td>MAIOR QUE 40,0</td>
+                    <td>OBESIDADE GRAVE</td>
+                    <td>III</td>
+                </tr>
+            </table>
+        </div>
+        <div class="container">
+            <h2>CALCULADORA DE IMC</h2>
+            <section>
+                <div class="box1">
+                    <p>Altura (ex: 1.56) </p>
+                    <input type="number" name="Altura" id="Altura" required placeholder="Metros">
+                </div>
+                <div class="box2">
+                    <p>Peso (ex: 60.2)</p>
+                    <input type="number" name="Peso" id="Peso" required placeholder="Quilos">
+                </div>
+            </section>
+            <div class="buttons">
+                <button onclick="Calcular()">Calcular</button>
+                <button onclick="Limpar()">Limpar</button>
+            </div>
+            <p id="resultado">.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
