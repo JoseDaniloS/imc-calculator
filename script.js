@@ -9,9 +9,14 @@ function Calcular(){
     var peso = Number(tn2.value)
     var resultado = peso / (altura ** 2)
     
-    result.innerText = 'SEU IMC:' + resultado.toFixed(2)
-    result.style.color ="rgb(209, 32, 32)"
-    result.style.fontSize = "15px"
+    if((tn1.value == "")||(tn2.value == "")){
+        result.innerText = null;
+    }
+    else{
+        result.innerText = 'SEU IMC:' + resultado.toFixed(2);
+        result.style.color ="rgb(209, 32, 32)";
+        result.style.fontSize = "15px";
+    }
 
 }
 
