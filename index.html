@@ -4,64 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CALCULAR IMC</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="desktop.css">
+<link rel="stylesheet" href="mobile.css".css>
 <link rel="shortcut icon" href="calculator-fill.svg" type="image/x-icon">
 </head>
 <body>
     <div class="background">
-        <div class="table">
-            <table>
-                <p class="title">VEJA INTERPRETAÇÃO DO IMC</p>
-                <tr>
-                    <td>IMC</td>
-                    <td>CLASSIFICAÇÃO</td>
-                    <td>OBESIDADE(GRAU)</td>
-                </tr>
-                <tr>
-                    <td>MENOR QUE 18,5</td>
-                    <td>MAGREZA</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>ENTRE 18,5 E 24,9</td>
-                    <td>NORMAL</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>ENTRE 25,0 E 29,9</td>
-                    <td>SOBREPESO</td>
-                    <td>I</td>
-                </tr>
-                <tr>
-                    <td>ENTRE 30,0 E 39,9</td>
-                    <td>OBESIDADE</td>
-                    <td>II</td>
-                </tr>
-                <tr>
-                    <td>MAIOR QUE 40,0</td>
-                    <td>OBESIDADE GRAVE</td>
-                    <td>III</td>
-                </tr>
-            </table>
-        </div>
-        <div class="container">
-            <h2>CALCULADORA DE IMC</h2>
-            <section>
-                <div class="box1">
-                    <p>Altura (ex: 1.56) </p>
-                    <input type="number" name="Altura" id="Altura" required placeholder="Metros">
-                </div>
-                <div class="box2">
-                    <p>Peso (ex: 60.2)</p>
-                    <input type="number" name="Peso" id="Peso" required placeholder="Quilos">
-                </div>
-            </section>
-            <div class="buttons">
-                <button onclick="Calcular()">Calcular</button>
-                <button onclick="Limpar()">Limpar</button>
+        <!--NAV CONTENDO A TABELA DE IMC E A CALCULADORA DE IMC-->
+        <nav>
+            <div class="table">
+                <p class="title">TABELA DE IMC:</p>
+
+                <!--TABELA DE IMC -->
+                <table>
+                    <tr><!--LINHA 1-->
+                        <td>IMC</td>
+                        <td>CLASSIFICAÇÃO</td>
+                        <td>OBESIDADE(GRAU)</td>
+                    </tr>
+                    <tr><!--LINHA 2-->
+                        <td>MENOR QUE 18,5</td>
+                        <td>MAGREZA</td>
+                        <td>0</td>
+                    </tr>
+                    <tr><!--LINHA 3-->
+                        <td>ENTRE 18,5 E 24,9</td>
+                        <td>NORMAL</td>
+                        <td>0</td>
+                    </tr>
+                    <tr><!--LINHA 4-->
+                        <td>ENTRE 25,0 E 29,9</td>
+                        <td>SOBREPESO</td>
+                        <td>I</td>
+                    </tr>
+                    <tr><!--LINHA 5-->
+                        <td>ENTRE 30,0 E 39,9</td>
+                        <td>OBESIDADE</td>
+                        <td>II</td>
+                    </tr>
+                    <tr><!--LINHA 6-->
+                        <td>MAIOR QUE 40,0</td>
+                        <td>OBESIDADE GRAVE</td>
+                        <td>III</td>
+                    </tr>
+                </table>
             </div>
-            <p id="resultado">.</p>
-        </div>
+
+            <!--CALCULADORA DE IMC-->
+            <div class="container">
+                <h2>CALCULADORA DE IMC</h2>
+                <section>
+                    <div class="box1"><!--SOLICITANDO A ALTURA PARA O USUARIO-->
+                        <p>Altura (ex: 1.56) </p>
+                        <input type="number" name="Altura" id="Altura" required placeholder="Metros">
+                    </div>
+                    <div class="box2"><!--SOLICITANDO O PESO DO USUARIO-->
+                        <p>Peso (ex: 60.2)</p>
+                        <input type="number" name="Peso" id="Peso" required placeholder="Quilos">
+                    </div>
+                </section>
+                <div class="buttons"><!--BOTOES DE CALCULAR OU LIMPAR -->
+                    <button onclick="Calcular()">Calcular</button>
+                    <button onclick="Limpar()">Limpar</button>
+                </div>
+                <p id="resultado"></p><!--ONDE SERÁ EXIBIDO O RESULTADO DO CALCULO-->
+            </div>
+           
+        </nav>
+         <span><!--OBSERVAÇÃO: EXPLICANDO O QUE É IMC-->
+            <div class="text">
+                <h2>O que é IMC?</h2>
+                <p>O Índice de Massa Corporal (IMC) é uma das principais ferramentas, adotada inclusive pela Organização Mundial de Saúde (OMS), para calcular o chamado “peso ideal”. Obtido a partir do peso e da altura do indivíduo, o IMC também aponta níveis de magreza e obesidade, que são usados para nortear o trabalho de profissionais de saúde e de educadores físicos.</p>
+                <p>Para obter o IMC, basta dividir o seu peso (em quilos) pela altura (em metros) elevada ao quadrado (altura x altura). De acordo com o indicador, o peso considerado saudável é aquele situado entre 18,5 e 24,9</p>
+                <img src="balança.png" alt="">
+            </div>
+        </span>
     </div>
     <script src="script.js"></script>
 </body>

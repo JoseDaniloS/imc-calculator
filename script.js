@@ -1,25 +1,32 @@
 
-var tn1 = document.getElementById('Altura')
-var tn2 = document.getElementById('Peso')
-var result = document.getElementById('resultado')
+//DEFINIÇÃO DE VARIAVEIS CONSTANTES
+const tn1 = document.getElementById('Altura')
+const tn2 = document.getElementById('Peso')
+const result = document.getElementById('resultado')
 
 function Calcular(){
-
-    var altura = Number(tn1.value)
-    var peso = Number(tn2.value)
-    var resultado = peso / (altura ** 2)
     
+    //VARIVEIS LOCAIS
+    let altura = Number(tn1.value)
+    let peso = Number(tn2.value)
+    //VARIAVEL GLOBAL
+    var resultado = peso / (altura ** 2)
+
+    //VERIFICA SE FOI DIGITADO ALGO NOS INPUT
     if((tn1.value == "")||(tn2.value == "")){
-        result.innerText = null;
+        result.innerText = null
     }
     else{
-        result.innerText = 'SEU IMC:' + resultado.toFixed(2);
-        result.style.color ="rgb(209, 32, 32)";
-        result.style.fontSize = "15px";
+        result.innerText = 'SEU IMC:' + resultado.toFixed(1)
+        result.style.color ="white"
+        result.style.fontSize = "13px"
+        result.style.background = "red"
+        result.style.padding = "5px"
+        result.style.borderRadius = "10px"
     }
 
 }
-
+//FUNÇÃO PARA LIMPAR OS CAMPOS DE INPUT
 function Limpar(){
     tn1.value = null
     tn2.value = null
