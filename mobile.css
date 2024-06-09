@@ -1,45 +1,35 @@
 @media (width <= 700px ){
     /*FUNDO DO SITE*/
     .background{
-        height: 100vh;
         background:linear-gradient(rgb(113, 163, 176)50%, white);
         width: 100%;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        justify-content: space-evenly;
     }
     /*CORPO GUARDANDO TODOS OS OBJETOS INCLUSIVE(TEXTOS)*/    
     nav{
         display: flex;
         flex-direction: column-reverse;
-        justify-content: start; 
+        justify-content: space-evenly; 
+        
     }
     /*CORPO DA CALCULADORA*/        
     .container{
-        position: relative;
-        bottom: 40px;
-        height: 40px;
-        width: 270px;
         display:flex;
         flex-direction: column;
         font-size: 11px;
         font-weight: 600;
         text-align: start;
-        justify-content: space-around;
         color:  rgb(55, 85, 138);
         font-family: Arial;
-        align-items: start;
     }
 
 
     .container section{
-        position: relative;
-        right: 15px;
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
-        flex-direction:row;
+        justify-content: space-between;
     }
 
     .container input{
@@ -47,23 +37,20 @@
         font-weight: 700;
         border:2px solid rgb(55, 85, 138);
         padding-left: 10px;
-        position: relative;
         height: 30px;
         width: 100px;
         font-size: 11px;
+        margin-bottom: 10px;
     }
     /*BOTOES DE CALCULAR E LIMPAR*/
     button{
-        position: relative;
         font-weight: 600;
         border-radius: 40px;
         background-color: rgb(91,107,180);
         color: white;
         border: none;
-        top: 10px;
         height: 30px;
         width: 100px;
-        margin-bottom: 20px;
     }
 
     button:nth-child(1):hover{
@@ -82,14 +69,8 @@
 
     /*TABELA DO IMC*/
     table{
-        height: 200px;
+        height: 180px;
         width: 280px;
-        position: relative;
-    }
-    /*TABELA COM TITULO INCLUSO*/
-    .table{
-        position: relative;
-        top: 35px;
     }
     
     /*TITULO ACIMA DA TABELA*/
@@ -125,9 +106,7 @@
     .container h2{
         font-size: 21px;
         color: rgb(55, 85, 138);
-        position: relative;
         font-family: Arial, Helvetica, sans-serif;
-        top: 17px;
     }
     
     /*TEXTO EXPLICATIVO SOBRE O QUE É IMC*/
@@ -137,12 +116,9 @@
         color: rgb(49, 49, 50);
         font-weight: 600;
         font-family: Arial, Helvetica, sans-serif;
-        height: 120px;
-        width: 269px;
-        font-size: 11px;
-        bottom: 23px;
-        right: 10px;
-        
+        height: 130px;
+        width: 290px;
+        font-size: 12px;
     }
 
     /*EXCLUINDO TEXTO P(2)
@@ -153,18 +129,16 @@
     
     /*TAMANHO DO OBJETO ONDE SERA EXIBIDO O RESULTADO*/
     #resultado{
-        height:30px;
+        height:20px;
         width: 100px;
+        text-align: center;
     }
 
     /*TITULO ACIMA DO TEXTO EXPLICATIVO*/
     .text h2{
-        position: relative;
         font-size: 23px;
         font-family: Arial, Helvetica, sans-serif;
         color: rgb(57,56,56);
-        right: 10px;
-        bottom: 10px;
     }
     /*REMOVENDO A IMAGEM QUE SERA EXIBINDO NO DESKTOP*/
     .text img{

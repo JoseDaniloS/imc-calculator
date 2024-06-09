@@ -31,6 +31,7 @@ function Limpar(){
     tn1.value = null
     tn2.value = null
     result.innerText = null
+    result.style.background = "transparent"
 
 }
 
